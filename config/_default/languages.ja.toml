@@ -1,0 +1,33 @@
+languageCode = "ja"
+languageName = "Japanese"
+title = "荻上チキSession書き起こし"
+weight = 1
+
+
+[params]
+  displayName = "JP"
+  isoCode = "ja"
+  rtl = false
+
+
+  #logo = "img/blowfish_logo_transparent.png"
+  logo = "img/icon0152.png"
+
+  description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+  # copyright = "Copy, _right?_ :thinking_face:"
+
+  dateFormat = "2006年January2日 "
+  #dateFormat = "2 January 2006"
+
+[author]
+  name = "yamadatt"
+  image = "img/dancer.jpg"
+  headline = ""
+  bio = ""
+  links = [
+    { twitter = "https://twitter.com/yamadatt" },
+    { github = "https://github.com/yamadatt" },
+  ]
+
+
+
