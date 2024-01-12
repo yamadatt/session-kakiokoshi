@@ -19,12 +19,12 @@ jobs:
 
         runs-on: ubuntu-latest
         
-        steps:
-            - name: Git checkout
-                uses: actions/checkout@v4
-                with:
-                fetch-depth: 0
-                submodules: true
+        # steps:
+        #     - name: Git checkout
+        #         uses: actions/checkout@v4
+        #         with:
+        #         fetch-depth: 0
+        #         submodules: true
             
             # - name: Set git config core.quotepath false # https://github.com/gohugoio/hugo/issues/9810#issuecomment-1107519804
             #   run: git config --global core.quotepath false
