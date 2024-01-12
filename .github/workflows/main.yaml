@@ -1,4 +1,4 @@
-name: CI
+name: Hugo & Deploy by FTP
 
 on:
   push:
@@ -14,25 +14,26 @@ concurrency:
 jobs:
     deploy:
         env:
-          HUGO_VERSION: ${{ github.sha }}
-          TZ: Asia/Tokyo
+            HUGO_VERSION: ${{ github.sha }}
+            TZ: Asia/Tokyo
+
         runs-on: ubuntu-latest
         
         steps:
             - name: Git checkout
-              uses: actions/checkout@v4
-              with:
+                uses: actions/checkout@v4
+                with:
                 fetch-depth: 0
-                # submodules: true
+                submodules: true
             
             # - name: Set git config core.quotepath false # https://github.com/gohugoio/hugo/issues/9810#issuecomment-1107519804
             #   run: git config --global core.quotepath false
-  
+
             # - name: Use Node.js
             #   uses: actions/setup-node@v1
             #   with:
             #     node-version: '16.x'
-           
+            
             # - name: Install Theme
             #   run: cd themes/hugo-theme-luna && yarn install --production
                 
@@ -40,8 +41,8 @@ jobs:
             #   run: npm install postcss-cli -g
 
             - name: Setup hugo
-              uses: peaceiris/actions-hugo@v2
-              with:
+                uses: peaceiris/actions-hugo@v2
+                with:
                 hugo-version: '0.120.0'
                 extended: true
 
@@ -49,8 +50,8 @@ jobs:
             run: hugo --minify
 
             - name: Deploy
-              uses: SamKirkland/FTP-Deploy-Action@4.3.2
-              with:
+                uses: SamKirkland/FTP-Deploy-Action@4.3.2
+                with:
                 server: ${{ secrets.FTP_SERVER }}
                 username: ${{ secrets.FTP_USERNAME }}
                 password: ${{ secrets.FTP_PASSWORD }}
