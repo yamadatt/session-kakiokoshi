@@ -48,3 +48,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/
           server-dir: /home/session/www/
+          protocol: ftps
