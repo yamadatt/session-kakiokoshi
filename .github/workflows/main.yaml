@@ -41,11 +41,11 @@ jobs:
       - name: Build
         run: hugo --minify
       - name: Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/
           server-dir: /home/session/www/
-          protocol: ftps
+          
