@@ -26,7 +26,7 @@ weight = 1
   bio = ""
   links = [
     { twitter = "https://twitter.com/yamadatt" },
-    { github = "https://github.com/yamadatt" },
+    { github = "https://github.com/yamadatt/session-kakiokoshi/" },
   ]
 
 
